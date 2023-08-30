@@ -92,22 +92,22 @@ public abstract class Electrodomestico {
     public void precioFinal() {
         switch (consumoEnergetico) {
             case "A":
-                setPrecio(1000d);
+                setPrecio(getPrecio() + 1000d);
                 break;
             case "B":
-                setPrecio(800d);
+                setPrecio(getPrecio() + 800d);
                 break;
             case "C":
-                setPrecio(600d);
+                setPrecio(getPrecio() + 600d);
                 break;
             case "D":
-                setPrecio(500d);
+                setPrecio(getPrecio() + 500d);
                 break;
             case "E":
-                setPrecio(300d);
+                setPrecio(getPrecio() + 300d);
                 break;
             case "F":
-                setPrecio(100d);
+                setPrecio(getPrecio() + 100d);
                 break;
 
             default:
@@ -125,16 +125,14 @@ public abstract class Electrodomestico {
         }
     }
 
-
     @Override
     public String toString() {
         return "{" +
-            " precio='" + getPrecio() + "'" +
-            ", peso='" + getPeso() + "'" +
-            ", color='" + getColor() + "'" +
-            ", consumoEnergetico='" + getConsumoEnergetico() + "'" +
-            "}";
+                " precio='" + getPrecio() + "'" +
+                ", peso='" + getPeso() + "'" +
+                ", color='" + getColor() + "'" +
+                ", consumoEnergetico='" + getConsumoEnergetico() + "'" +
+                "}";
     }
-
 
 }
